@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Install httpd
+      package:
+        apt: httpd
+        state: present
+    - name: Install git
+      package:
+        apt: git
+        state: present
